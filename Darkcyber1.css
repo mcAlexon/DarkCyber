@@ -18,12 +18,20 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 50px;
+    
 }
 .header__name{
     display: flex;
-    color: white;
+    color: #c847e9;
+    text-shadow: 0px -1px 17px rgba(255, 255, 255, 0.65);
     align-self: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 117px;
+    padding-bottom: 40px;
+    cursor: default;
 }
 .header__menu{
     display: flex;
@@ -36,23 +44,74 @@ body{
     text-decoration: none;
 }
 .main{
-    display: flex;
-    justify-content: center;
+    display: block;
     height: 80%;
-    flex: 1 0 auto;
     padding-top: 10%;
+    min-height: 400px;
 }
 .main__accordeon{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    color: white;
-    width: 80%;
-    
+    justify-content: center;
+    gap: 150px;
+    color: black;
+    cursor: default;
 }
 summary::marker{
     content: "";
 }
+.main__content{
+    display: flex;
+    border: 1px solid purple;
+    height: 150px;
+    width: 250px;
+    
+}
+.content_1{
+    background: linear-gradient(45deg,silver,rgb(230, 230, 230));
+}
+.content_2{
+    background: linear-gradient(45deg,gold,white);
+}
+.content_3{
+    background: linear-gradient(45deg,white,rgb(181, 0, 253));
+}
+.main__tariff{
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-top: 10px;
+}
+.main__standart{
+    list-style-type: '––';
+    padding-left: 10px;
+    white-space: nowrap;
+}
+.main__h4{
+    display: inline;
+}
 .footer{
-    flex: 0 0 auto;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid white;
+    flex-shrink: 0;
+}
+.footer__info{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    align-items: center;
+    color: white;
+}
+.footer__image{
+    width: 55px;
+    height: 55px;
+}
+.footer__icons{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    gap: 20px;
+    cursor: pointer;
 }

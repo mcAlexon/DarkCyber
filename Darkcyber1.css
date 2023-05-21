@@ -5,7 +5,6 @@
 body, html{
     background-color: black;
     font: 14px 'Roboto', sans-serif;
-    line-height: normal;
     padding: 0;
     margin: 0;
     height: 100%;
@@ -17,32 +16,64 @@ body, html{
 .page{
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
 }
-.header{
+.wrapper{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    min-height: 100%;
     
+    width: auto;
+    flex: 1 1 auto;
+    background-image: url(./-u3Qb8K_PDg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.header__name{
+.overlay{
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.274);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.header{
     display: flex;
-    color: #c847e9;
-    text-shadow: 0px -1px 17px rgba(255, 255, 255, 0.65);
-    align-self: center;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 96px;
-    line-height: 117px;
-    padding-bottom: 40px;
-    cursor: default;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    z-index: 2;  
+    background-color: rgba(0, 0, 0, 0.979);
+    border-bottom: 1px solid white;
+    z-index: 1;
+    min-height: 100px;
+    height: 100px;
 }
+.header__logo{
+    position: relative;
+    left: 5%;
+    border-radius: 8px;
+    text-align: center;
+    width: 80px;
+    height: 80px;  
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: url(./SpwIRhCRFWw.jpg);
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .header__menu{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-grow:1 ;
     gap:40px;
+    margin: 0;
+    list-style-type: none;
 }
 .header__points{
     color: white;
@@ -50,50 +81,155 @@ body, html{
 }
 .main{
     display: flex;
-    justify-content: center;
+    height: 100%;
+    flex: 1 0 auto;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 100%;
+}
+.main__name{
+    color: white;
+    display: flex;
+    align-self: center;
     padding-top: 10%;
-    flex-grow: 1;
-    background-image: url(./HaQ2dwiZ3qk.jpg);
+    line-height: 100px;
+    font-size: 100px;
+    font-weight: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.main__accordeon{
+.main__city{
+    color: white;
     display: flex;
-    justify-content: center;
-    gap: 100px;
-    color: black;
-    cursor: default;
+    align-self: center;
+    padding-top: 2%;
+    line-height: 70px;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 5%;
 }
-summary::marker{
-    content: "";
+.main__geolocation{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-image: url(../free-icon-location-5249258.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
 }
-.main__content{
+.button{
+    position: relative;
+}
+.main__button{
+    color: white;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(1, 218, 218);
+    font-size: large;
+    font-weight: 1000;
+    height: 70px;
+    width: 400px;
+    letter-spacing: 8px;
+}
+.main__button:hover {
+    
+    -webkit-box-shadow: 0px 0px 45px 11px rgba(1, 252, 252, 0.5);
+    -moz-box-shadow: 0px 0px 45px 11px rgba(1, 252, 252, 0.5);
+    box-shadow: 0px 0px 45px 11px rgba(1, 252, 252, 0.5);
+}
+.main__button:active{
+    background-color: rgb(173, 255, 255);
+}
+.main__info{
     display: flex;
-    border: 1px solid purple;
-    height: 150px;
+    padding-top: 8%;
+    line-height: 200px;
+    width: 100%;
+    flex-direction: row;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: space-around;
+}
+
+.content{
+    display: flex;
+    flex: 1 0 500px;
+    flex-direction: column;
+    z-index: 1;
+    align-items: center;
+}
+.content__name{
+    padding-top: 5%;
+    color: white;
+    display: flex;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content__container{
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
     width: 250px;
+    justify-content: space-between;
+}
+.content__button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
     
 }
-.content_1{
-    background: linear-gradient(45deg,silver,rgb(230, 230, 230));
+.button__VIP{
+    color: gray;
 }
-.content_2{
-    background: linear-gradient(45deg,gold,white);
+.content__characteristic{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    padding: 20px 40px;
+    justify-content: space-between;
+    border: 2px solid aqua;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.content_3{
-    background: linear-gradient(45deg,white,rgb(181, 0, 253));
+.content__characteristic__PC-standart{
+    position: relative;
+    list-style-type: none;
+    list-style: "—";
+    
 }
-.main__tariff{
-    padding-bottom: 10px;
-    text-align: center;
-    border-bottom: 1px solid black;
-    padding-top: 10px;
+.characteristic__PC{
+    padding-left: 5px;
+    line-height: 30px;
+    color: aqua;
 }
-.main__standart{
-    list-style-type: '––';
-    padding-left: 10px;
-    white-space: nowrap;
+.li__text{
+    color: white;
 }
-.main__h4{
-    display: inline;
+.content__list-1{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.content__list-2{
+    display: none;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.content-2{
+
 }
 .footer{
     display: flex;
@@ -103,6 +239,7 @@ summary::marker{
     height: 100px;
     border-top: 1px solid white;
     flex-shrink: 0;
+    z-index: 2;
 }
 .footer__info{
     display: flex;

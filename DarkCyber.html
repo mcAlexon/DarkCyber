@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Darkcyber1.css">
+    <script src="./index.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="page">
+        <div class="wrapper">
+            <div class="overlay"></div>
     <header class="header">
-
-        <div class="header__name"> Dark cyber</div>
+        <div class="header__logo">
+        </div>
         <ul class="header__menu">
             <li><a href="#"class="header__points">Главная</a></li>
             <li><a href="#"class="header__points">Меню</a></li>
@@ -21,43 +24,58 @@
         </ul>
     </header>
     <main class="main">
-        <div class="main__accordeon">
-            <details class="main__content content_1">
-                <summary class="main__summary">  
-                    <h4 class="main__tariff"><p>Тариф Стандарт</p> </h4>
-                    <ul class="main__standart"> 
-                        <li><h4 class="main__h4"> 120 р/ч</h4></li>
-                        <li> Пакет "3 часа" - 300 Р</li>
-                        <li> Пакет "6 часов" - 450 Р</li>
-                        <li> Пакет "День"-750 З (9:00 - 21:00)</li>
-                    </ul>
-                </summary>
-            </details>
-            <details class="main__content content_2">
-                <summary class="main__summary">
-                    <h4 class="main__tariff"><p>Тариф VIP</p></h4>
-                    <ul class="main__standart"> 
-                        <li><h4 class="main__h4"> 150 р/ч</h4></li>
-                        <li> Пакет "3 часа" - 300 Р</li>
-                        <li> Пакет "6 часов" - 450 Р</li>
-                        <li> Пакет "День"-750 З (9:00 - 21:00)</li>
-                    </ul>
-                </summary>
-                hidden
-            </details>
-            <details class="main__content content_3">
-                <summary class="main__summary">
-                    <h4 class="main__tariff"><p>PS room</p></h4>
-                    <ul class="main__standart"> 
-                        <li><h4 class="main__h4"> 120 р/ч</h4></li>
-                        <li> Пакет "3 часа" - 300 Р</li>
-                        <li> Пакет "6 часов" - 450 Р</li>
-                        <li> Пакет "День"-750 З (9:00 - 21:00)</li>
-                    </ul>
-                </summary>
-            </details>
+        <div class="main__name">Dark Cyber</div>
+        <div class="main__city">Солнечн <a href="https://yandex.ru/maps/10755/solnechnogorsk/?ll=36.973459%2C56.187678&mode=poi&poi%5Bpoint%5D=36.973378%2C56.187821&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D102859914288&z=19.8"><div class="main__geolocation"></div></a>горск</div>
+        <div class="button">
+            <button class="main__button">ЗАБРОНИРОВАТЬ</button>
+        </div>
+        <div class="main__info">
+            <div class="main__work-hours">Режим Работы: 24/7</div>
+            <div class="main__geoposition">ул. Рабочая д. 9</div>
         </div>
     </main>
+    <div class="overlay"></div>
+</div>  
+<div class="content">
+    <div class="content__name">Характристики станций</div>
+    <div class="content__container">
+        <button class="content__button button__STANDART" id="button__STANDART">STANDART</button>
+        <button class="content__button button__VIP" id="button__VIP">VIP</button>
+    </div>
+    <div class="content__characteristic">
+        <div class="content__list-1" id="list-1">
+        <ul class="content__characteristic__PC-standart">
+            <li class="characteristic__PC"> <span class="li__text"> AMD Ryzen 5 5600X  </span></li>
+            <li class="characteristic__PC"> <span class="li__text"> GeRoce RTX 2070    </span></li>
+            <li class="characteristic__PC"> <span class="li__text"> Оперативная память </span></li>
+            <li class="characteristic__PC"> <span class="li__text"> 24" FULL HD 144 HZ </span></li>
+        </ul>
+        <ul class="content__characteristic__PC-standart">
+            <li class="characteristic__PC"> <span class="li__text">A4Tech B820N       </span></li>
+            <li class="characteristic__PC"> <span class="li__text">Logitech G102      </span></li>
+            <li class="characteristic__PC"> <span class="li__text">Asus TUF H3 Gaming </span></li>
+            <li class="characteristic__PC"> <span class="li__text">Кресло             </span></li>
+        </ul>
+    </div>
+    <div class="content__list-2" id="list-2">
+        <ul class="content__characteristic__PC-standart">
+            <li class="characteristic__PC"> <span class="li__text">AMD Ryzen 5 5600X  </span></li>
+            <li class="characteristic__PC"> <span class="li__text">GeRoce RTX 3070 Ti </span></li>
+            <li class="characteristic__PC"> <span class="li__text">Оперативная память </span></li>
+            <li class="characteristic__PC"> <span class="li__text">27" FULL HD 240 HZ </span></li>
+        </ul>
+        <ul class="content__characteristic__PC-standart">
+            <li class="characteristic__PC"><span class="li__text">Razer Ornata V2       </span></li>
+            <li class="characteristic__PC"><span class="li__text">Razer Basilisk V3     </span></li>
+            <li class="characteristic__PC"><span class="li__text">Razer Blackshark V2 X </span></li>
+            <li class="characteristic__PC"><span class="li__text">Кресло                </span></li>
+        </ul>
+    </div>
+    </div>
+</div>
+<div class="content-2">
+
+</div>
     <footer class="footer">
         <div class="footer__info">
             <div class="footer__feedback">
@@ -72,4 +90,5 @@
     </footer>
 </div>
 </body>
+<script src="./index.js"></script>
 </html>
